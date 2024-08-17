@@ -2,19 +2,19 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "denysmb@zoho.com",
-                "Name": "Denys Madureira"
+                "Email": "sengedev@duck.com",
+                "Name": "Senge Dev"
             }
         ],
         "Category": "Utilities",
-        "Description": "Quickly ask questions to your local LLVM with Ollama",
+        "Description": "借助Ollama，更便捷的实现对话功能",
         "EnabledByDefault": true,
         "Icon": "org.kde.neochat.tray",
-        "Id": "ChatQT",
+        "Id": "KOllama",
         "License": "LGPL-2.1+",
-        "Name": "ChatQT",
+        "Name": "KOllama",
         "KPackageStructure": "Plasma/Applet",
-        "Version": "1.0",
+        "Version": "0.1.0 Alpha",
         "Website": "https://plasma.kde.org/"
     },
     "X-Plasma-API-Minimum-Version": "6.0"
