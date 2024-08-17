@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2023 Denys Madureira <denysmb@zoho.com>
+    SPDX-FileCopyrightText: 2024 SengeDev <sengedev@duck.com>
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
@@ -80,7 +80,7 @@ PlasmoidItem {
 
                 if (listModel.count === oldLength) {
                     listModel.append({
-                        "name": "Assistant",
+                        "name": "ChatGPT",
                         "number": text
                     });
                 } else {
@@ -135,7 +135,7 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18n("Keep Open")
+            text: i18n("保持在前台")
             icon.name: "window-pin"
             priority: Plasmoid.LowPriorityAction
             checkable: true
@@ -143,7 +143,7 @@ PlasmoidItem {
             onTriggered: plasmoid.configuration.pin = checked
         },
         PlasmaCore.Action {
-            text: i18n("Clear chat")
+            text: i18n("清除聊天内容")
             icon.name: "edit-clear"
             onTriggered: {
                 listModelController.clear();
@@ -175,7 +175,7 @@ PlasmoidItem {
                     icon.name: "window-pin"
 
                     display: PlasmaComponents.AbstractButton.IconOnly
-                    text: i18n("Keep Open")
+                    text: i18n("保持在前台")
 
                     PlasmaComponents.ToolTip.text: text
                     PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -201,7 +201,7 @@ PlasmoidItem {
 
                 PlasmaComponents.Button {
                     icon.name: "edit-clear-symbolic"
-                    text: "Clear chat"
+                    text: "清除聊天内容"
                     display: PlasmaComponents.AbstractButton.IconOnly
                     enabled: hasLocalModel && !isLoading
                     hoverEnabled: hasLocalModel && !isLoading
@@ -236,7 +236,7 @@ PlasmoidItem {
                     anchors.centerIn: parent
                     width: parent.width - (Kirigami.Units.largeSpacing * 4)
                     visible: listView.count === 0
-                    text: i18n(hasLocalModel ? "I am waiting for your questions..." : "No local model found.\nPlease install some first.\n\nIf you need help, check Ollama documentation.")
+                    text: i18n(hasLocalModel ? "欢迎使用KOllama..." : "未找到本地模型\n请先安装一个或多个模型\n\n您可以访问Ollama官方文档获取更多帮助信息。")
                 }
 
                 model: ListModel {
@@ -275,7 +275,7 @@ PlasmoidItem {
 
                 enabled: hasLocalModel && !isLoading
                 hoverEnabled: hasLocalModel && !isLoading
-                placeholderText: i18n("Type here what you want to ask...")
+                placeholderText: i18n("请在此处键入您想提问的内容")
                 wrapMode: TextArea.Wrap
 
                 Keys.onReturnPressed: {
@@ -299,14 +299,14 @@ PlasmoidItem {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             
-            text: "Send"
+            text: "发送"
             hoverEnabled: hasLocalModel && !isLoading
             enabled: hasLocalModel && !isLoading
-            visible: hasLocalModel
+            visible: hasLocalModelF
 
             ToolTip.delay: 1000
             ToolTip.visible: hovered
-            ToolTip.text: "CTRL+Enter"
+            ToolTip.text: "按下CTRL+Enter发送"
             
             onClicked: {
                 request(messageField, listModel, scrollView, messageField.text);
@@ -317,7 +317,7 @@ PlasmoidItem {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             
-            text: "Refresh models list"
+            text: "刷新模型列表"
             visible: !hasLocalModel
             
             onClicked: getModels()

@@ -28,7 +28,7 @@ KCM.SimpleKCM {
             id: useFilledIcon
 
             Kirigami.FormData.label: i18nc("@title:group", "Icon:")
-            text: i18nc("@option:radio", "Filled adaptive icon")
+            text: i18nc("@option:radio", "自适应填充")
 
             QQC2.ButtonGroup.group: iconGroup
         }
@@ -36,7 +36,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: useOutlinedIcon
 
-            text: i18nc("@option:radio", "Outlined adaptive icon")
+            text: i18nc("@option:radio", "自适应边框")
 
             QQC2.ButtonGroup.group: iconGroup
         }
@@ -44,7 +44,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: useFilledDarkIcon
 
-            text: i18nc("@option:radio", "Filled dark icon")
+            text: i18nc("@option:radio", "暗色填充")
 
             QQC2.ButtonGroup.group: iconGroup
         }
@@ -52,7 +52,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: useFilledLightIcon
 
-            text: i18nc("@option:radio", "Filled light icon")
+            text: i18nc("@option:radio", "亮色填充")
 
             QQC2.ButtonGroup.group: iconGroup
         }
@@ -60,7 +60,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: useOutlinedDarkIcon
 
-            text: i18nc("@option:radio", "Outlined dark icon")
+            text: i18nc("@option:radio", "暗色边框")
 
             QQC2.ButtonGroup.group: iconGroup
         }
@@ -68,7 +68,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: useOutlinedLightIcon
 
-            text: i18nc("@option:radio", "Outlined light icon")
+            text: i18nc("@option:radio", "亮色边框")
 
             QQC2.ButtonGroup.group: iconGroup
         }
