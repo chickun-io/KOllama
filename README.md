@@ -43,7 +43,7 @@ ollama run qwen2
 ### 安装KOllama小组件
 
 ```bash
-git clone https://github.com/sengedev/KOllama.git
+git clone https://github.com/chickun-io/KOllama.git
 kpackagetool6 -t Plasma/Applet -i ./KOllama
 ```
 ## 使用方法
