@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2024 SengeDev <sengedev@duck.com>
+    SPDX-FileCopyrightText: 2024 Chickun <chickun@duck.com>
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
